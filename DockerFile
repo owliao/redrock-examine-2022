@@ -1,0 +1,6 @@
+FROM openjdk:11-jdk
+COPY /build/libs/redrock-examine-0.0.1-all.jar /bin/runner/run.jar
+WORKDIR /bin/runner
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' > /etc/timezone
+CMD ["java","-jar","run.jar"]

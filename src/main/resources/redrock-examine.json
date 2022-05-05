@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "28106061-2afa-4d28-9635-fe6433baf574",
+		"name": "redrock-examine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "灵感",
+			"item": [
+				{
+					"name": "获得灵感首页信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/idea/idea",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"idea",
+								"idea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获得idea的list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/idea/idea_detail_list",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"idea",
+								"idea_detail_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "灵感详细页面",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/idea/idea_detail",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"idea",
+								"idea_detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "颜色",
+			"item": [
+				{
+					"name": "获得颜色pageId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/color/page",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"color",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获得每一页的颜色id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "theme_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "limit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/color/color_list",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"color",
+								"color_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获得颜色详细页",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/color/color_detail",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"color",
+								"color_detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "注册",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "13983617205",
+									"description": "手机号",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "拓海",
+									"description": "用户名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user/register",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "注册",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "13983617205",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "拓海",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://redrock.udday.cn:8888/user/register",
+									"protocol": "http",
+									"host": [
+										"redrock",
+										"udday",
+										"cn"
+									],
+									"port": "8888",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 114,\n    \"message\": \"成功注册\",\n    \"data\": {}\n}"
+						},
+						{
+							"name": "注册",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "13983617205",
+											"description": "手机号",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "拓海",
+											"description": "用户名",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base}}/user/register",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 514,\n    \"message\": \"账号已存在\",\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "登陆",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "13983617205",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user/login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "不过期token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "13983617205",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user/long_login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user",
+								"long_login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "收藏",
+			"item": [
+				{
+					"name": "收藏",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6IlJFRFJPQ0siLCJpYXQiOjE2NTA4NjYzNjEsInVzZXJJRCI6MX0.IahGNpfdCAR2vjO2yrkWlkFDASngkhPJ_YT-qjaLgQEyAAc0G5-exyYB4l1s_tOz8A00cSIVU-wmzrUdExz2bg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "shade_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "颜色",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/star/star",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"star",
+								"star"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除收藏",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "star_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/star/delete_star",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"star",
+								"delete_star"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取收藏列表",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6IlJFRFJPQ0siLCJpYXQiOjE2NTA4NjYzNjEsInVzZXJJRCI6MX0.IahGNpfdCAR2vjO2yrkWlkFDASngkhPJ_YT-qjaLgQEyAAc0G5-exyYB4l1s_tOz8A00cSIVU-wmzrUdExz2bg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/star/star_list?page=1&limit=10",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"star",
+								"star_list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
